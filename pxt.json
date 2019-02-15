@@ -1,0 +1,19 @@
+{
+    "name": "knockbit_robotbit",
+    "version": "0.0.0",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "bluetooth": "*",
+        "KnockBit": "github:makerdart/knockbit#v1.0.2",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.2.8"
+    },
+    "files": [
+        "README.md",
+        "knockbit_robot.ts"
+    ],
+    "testFiles": [
+        "knockbit_robot_test.ts"
+    ],
+    "public": false
+}
