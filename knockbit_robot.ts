@@ -65,18 +65,30 @@ namespace knockbit {
 
     // 电机速度
     let M1A_SPEED = 0, M2A_SPEED = 0, M1B_SPEED = 0, M2B_SPEED = 0;
-    
+
     // 4个速度，分别为M1A,M2B,M2A,M1B,每个速度4位-255～0255
 
     //% blockId=knock_robot_tt4
     //% block="驱动电机tt4" |参数 %args"
     export function tt4(args: string) {
-        M1A_SPEED = parseInt(args.substr(0, 4));
-        M2B_SPEED = parseInt(args.substr(4, 4));
-        if (args.length >= 16) {
-            M2A_SPEED = parseInt(args.substr(8, 4));
-            M1B_SPEED = parseInt(args.substr(12, 4));
+        if (args.length == 1) {
+            if (args == "0") {
+                M1A_SPEED = 0;
+                M2B_SPEED = 0;
+                M2A_SPEED = 0;
+                M1B_SPEED = 0;
+            }
+            // =1 的时候按照上次的设置的速度继续运行
         }
+        else {
+            M1A_SPEED = parseInt(args.substr(0, 4));
+            M2B_SPEED = parseInt(args.substr(4, 4));
+            if (args.length >= 16) {
+                M2A_SPEED = parseInt(args.substr(8, 4));
+                M1B_SPEED = parseInt(args.substr(12, 4));
+            }
+        }
+
         motorRestore();
     }
     function doPause() {
