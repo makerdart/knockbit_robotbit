@@ -70,7 +70,7 @@ namespace knockbit {
 
     //% blockId=knock_robot_tt4
     //% block="驱动电机tt4" |参数 %args"
-    function tt4(args: string) {
+    export function tt4(args: string) {
         M1A_SPEED = parseInt(args.substr(0, 4));
         M2B_SPEED = parseInt(args.substr(4, 4));
         if (args.length >= 16) {
@@ -100,7 +100,7 @@ namespace knockbit {
     // 接下去3位为转动角度，0～990(一般为0～180)
     //% blockId=knock_robot_servo
     //% block="驱动舵机ser" |参数 %args"
-    function servo(args: string) {
+    export function servo(args: string) {
         let stop = parseInt(args.substr(0, 1));
         if (args.length >= 5) {
             let index = parseInt(args.substr(1, 1));
