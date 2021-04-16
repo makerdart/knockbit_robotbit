@@ -26,7 +26,7 @@ namespace knockbit {
     }
 
     //% blockId=knock_neopixel_showLed
-    //% block="显示LED" | Strip %strip| 参数 %args"
+    //% block="显示LED | Strip %strip| 参数 %args"
     export function showLed(strip: neopixel.Strip, args: string) {
         //basic.showString(arg);
         if (strip == null || pixelCount == 0)
@@ -49,7 +49,7 @@ namespace knockbit {
     }
 
     //% blockId=knock_neopixel_clearLed
-    //% block="关闭LED" | Strip %strip"
+    //% block="关闭LED | Strip %strip"
     export function clearLed(strip: neopixel.Strip) {
         if (strip != null) {    // 断开蓝牙时关闭led灯
             for (let i = 0; i < pixelCount; i++)
@@ -69,7 +69,7 @@ namespace knockbit {
     // 4个速度，分别为M1A,M2B,M2A,M1B,每个速度4位-255～0255
 
     //% blockId=knock_robot_tt4
-    //% block="驱动电机tt4" |参数 %args"
+    //% block="驱动电机 tt4 |参数 %args"
     export function tt4(args: string) {
         if (args.length == 1) {
             if (args == "0") {
@@ -110,7 +110,7 @@ namespace knockbit {
     // 第二位开始每4位为一个组，其中第一位为舵机编号，支持0-9共10个舵机，
     // 接下去3位为转动角度，0～990(一般为0～180)
     //% blockId=knock_robot_servo
-    //% block="驱动舵机ser" |参数 %args"
+    //% block="驱动舵机 servo |参数 %args"
     export function servo(args: string) {
         let stop = parseInt(args.substr(0, 1));
         if (args.length >= 5) {
