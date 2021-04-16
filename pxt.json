@@ -5,8 +5,8 @@
     "dependencies": {
         "core": "*",
         "bluetooth": "*",
-        "KnockBit": "github:makerdart/knockbit#v1.0.3",
-        "robotbit": "github:kittenbot/pxt-robotbit#v0.2.8"
+        "KnockBit": "github:makerdart/knockbit#v1.1.2",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.3.6"
     },
     "files": [
         "README.md",
