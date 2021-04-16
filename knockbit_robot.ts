@@ -69,7 +69,7 @@ namespace knockbit {
     // 4个速度，分别为M1A,M2B,M2A,M1B,每个速度4位-255～0255
 
     //% blockId=knock_robot_tt4
-    //% block="驱动电机tt4" |参数 %args"
+    //% block="驱动电机tt4 |参数 %args"
     export function tt4(args: string) {
         if (args.length == 1) {
             if (args == "0") {
