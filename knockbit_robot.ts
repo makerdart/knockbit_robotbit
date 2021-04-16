@@ -69,7 +69,7 @@ namespace knockbit {
     // 4个速度，分别为M1A,M2B,M2A,M1B,每个速度4位-255～0255
 
     //% blockId=knock_robot_tt4
-    //% block="驱动电机 tt4 |参数 %args"
+    //% block="驱动电机tt4" |参数 %args"
     export function tt4(args: string) {
         if (args.length == 1) {
             if (args == "0") {
@@ -110,7 +110,7 @@ namespace knockbit {
     // 第二位开始每4位为一个组，其中第一位为舵机编号，支持0-9共10个舵机，
     // 接下去3位为转动角度，0～990(一般为0～180)
     //% blockId=knock_robot_servo
-    //% block="驱动舵机 servo |参数 %args"
+    //% block="驱动舵机 ser |参数 %args"
     export function servo(args: string) {
         let stop = parseInt(args.substr(0, 1));
         if (args.length >= 5) {
